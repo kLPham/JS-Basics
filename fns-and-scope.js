@@ -4,65 +4,77 @@ var name = 'Tyler';
 //Create a function called isTyler that accepts name as it's only parameter.
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
-  //Code Here
+function isTyler(name) {
+  if (name == 'Tyler') {
+    return true;
+  } else {
+    return false;
+  }
+}
 
-//////////////////PROBLEM 2////////////////////
-
-
-//Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
-
-
-  //Code Here
-
-
-//////////////////PROBLEM 3////////////////////
+  //////////////////PROBLEM 2////////////////////
 
 
+  //Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
 
-//Create a function called welcome that uses your getName function you created in the previous problem to get the users name,
-//then alerts "Welcome, " plus whatever the users name is.
+function getName(){
+    name = prompt();
+     return name;
+  }
 
-  //Code Here
+  //////////////////PROBLEM 3////////////////////
 
-
-//////////////////PROBLEM 4////////////////////
-
-
-
-
-//What is the difference between arguments and parameters?
-
-  //Answer Here
-
-
-//////////////////PROBLEM 5////////////////////
-
-
-
-//What are all the falsy values in JavaScript and how do you check if something is falsy?
-
-
-  //Answer Here
-
-
-
-//////////////////PROBLEM 6////////////////////
-
-
-
-//Create a function called myName that returns your name
-
-  //Code Here
+  //Create a function called welcome that uses your getName function you created in the previous problem to get the users name,
+  //then alerts "Welcome, " plus whatever the users name is.
   
+  function welcome() {
+    alert("Welcome, " + getName());
+  }
 
 
-//Now save the function definition of myName into a new variable called newMyName
+  //////////////////PROBLEM 4////////////////////
 
-  //Code Here
+
+
+
+  //What is the difference between arguments and parameters?
+
+  //Arguments is something that is passed when calling a function.
+  // Parameters are 
+
+
+  //////////////////PROBLEM 5////////////////////
+
+
+
+  //What are all the falsy values in JavaScript and how do you check if something is falsy?
+
+
+  //  null, NAN, 0,false and undefined.
+  //  You use the if statement to check for the falsy statement.
+
+
+
+  //////////////////PROBLEM 6////////////////////
+
+
+
+  //Create a function called myName that returns your name
+  
+  function myName(){
+   var name= "Kelly";
+    return name;
+  }
+
+
+  //Now save the function definition of myName into a new variable called newMyName
+
+   var newMyName = myName;
+
 
 //Now alert the result of invoking newMyName
 
-
+alert(newMyName);
 
 //////////////////PROBLEM 7////////////////////
 
@@ -70,10 +82,17 @@ var name = 'Tyler';
 
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
-  //Code Here
+  
+
+  function outerFn(){
+    return function(){
+      return "Kelly"
+    }
+  }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
-  //Code Here
+  var innerFn = outerFn();
 
 //Now invoke innerFn.
+innerFn();
